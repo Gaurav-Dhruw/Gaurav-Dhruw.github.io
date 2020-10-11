@@ -1,0 +1,707 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    cursor: default;
+}
+
+
+/* Navigaton Bar */
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    z-index: 20;
+    height: 35px;
+    display: flex;
+    align-items: center;        
+    background-color: rgba(0, 0, 0, 0.801);
+    
+}
+
+#Menu{
+    width: 20px;
+    filter: invert(50%);
+}
+
+#Menucontainer{
+    position: absolute;
+    left: 12px;
+    height: 57.15%;
+    width: 20px;
+    padding: 5px 5px;
+    transition: 0.1s;
+    
+}
+#Menucontainer:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+#SiteName{
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 178px;
+    cursor: default;
+
+}
+
+#Logo{
+    position: absolute;
+    width: 29px;
+    filter: invert(100%);
+    left: 145px;
+}
+
+
+#SearchContainer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 13%;
+    width: 19%;
+    
+}
+
+#Search{ 
+    width: 100%;
+    padding-left: 32px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    cursor: text;
+    background-color: rgb(223 218 218);
+    text-align: left;
+    border-radius: 5px;     
+}
+
+#Search:focus{
+    outline: none;
+    background-color: white;
+}
+
+#Search:focus::-webkit-input-placeholder{
+    color:transparent;
+}
+#Search::-webkit-search-cancel-button{
+    display: none;
+}
+
+#SearchIcon{
+    width: 20px;
+    position: absolute;
+    
+    padding:2px 6px;
+    padding-right: 5px;
+          
+}
+
+
+
+/* Bckground Image */
+
+Body{ 
+    width: 100%;
+    height: 100%;
+    /* background-image: url("light bg.jpg"); */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+    opacity: 1;        
+}
+
+
+
+/* Text Area */
+#TextArea{
+    width: 45%;
+    height: 20%;
+    margin:auto;
+    margin-top: 75px;
+    margin-bottom: 45px;
+}
+textarea{
+    outline: none;
+    resize: none;
+    font-size: 1.1rem;
+    border: rgb(167 164 164) solid 4px;
+    border-radius: 7px;
+    padding: 7px 10px;
+    width: 95%;
+    height: 81%;
+    cursor: text;
+    background-color: rgb(255, 255, 255);
+}
+
+textarea:focus::-webkit-input-placeholder{
+    color:transparent;
+    /* background-color: rgb(255, 255, 255); */
+    /* border: rgb(148 169 187) solid 4px; */
+}
+
+
+
+/* Scroll Bar*/
+textarea::-webkit-scrollbar {
+    width: 7px;
+}
+  
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+textarea::-webkit-scrollbar-thumb {
+    background: rgb(112, 112, 112);
+    border-radius: 5px
+}
+  
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+hr{
+    height: 3px;
+    border: none;
+    border-radius: 5px;
+    background-color:  rgb(0 0 0 / 34%);
+    width: 55%;
+    
+    margin: auto;
+}
+
+
+
+/* Drop Menu */
+
+/* #cross{
+    position: absolute;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    right: 2px;
+    top: 4px;
+    transition: 0.1s;
+} */
+
+#cross img{
+    width: 12px;
+    cursor: pointer;
+    filter: invert(.8);
+}
+
+#cross:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#DropMenu{
+    color: white;
+    display: block;
+    position: fixed;
+    top: 35px;
+    background-color: rgb(20, 20, 20);  
+    border:2px rgb(36, 34, 34) solid;
+    border-left:none;
+    width:14%;
+    min-width: 109px;
+    height: 93.3075%;
+    transition: 0.5s;
+    transform: translateX(-100%);
+}
+
+#LiContainer{
+    height: 93%;   
+}
+
+.item{
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    width: 76%;
+    text-align: left;
+    padding: 10px 12.5%;
+}
+
+.item:hover{
+    background-color: rgb(36, 34, 34);
+}
+
+/* .item:active{
+    background-color: rgb(36, 34, 34);
+} */
+
+.MenuHr{
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color:rgb(36, 34, 34);
+}
+
+
+
+/* About Page */
+
+/* #about{  
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+} */
+
+#aboutcross{
+    position: absolute;
+    top: 21%;
+    right: 22.6%;;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    /* cursor: pointer; */
+    transition: 0.1s;
+}
+
+#aboutcross img{
+    border-radius: 20px;
+    height: 12px;
+    width: 12px;
+    padding: 3px;
+    /* cursor: pointer; */
+    filter: invert(.8);   
+}
+
+#about h2{
+    position: absolute;
+    top: 30%;
+    width: 45%;   
+    display: block;
+    text-decoration: underline;
+}
+
+#about p{
+    width: 45%;    
+    position: absolute;
+    top: 40%;
+    display: block;
+}
+
+
+
+/* How To Page */
+
+/* #HowTo{   
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+} */
+
+#HowTocross{
+    position: absolute;
+    top: 21%;
+    right: 22.6%;;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    /* cursor: pointer; */
+    transition: 0.1s;
+}
+
+#HowTocross img{
+    border-radius: 20px;
+    height: 12px;
+    width: 12px;
+    padding: 3px;
+    /* cursor: pointer; */
+    filter: invert(.8);  
+}
+/* #HowTocross img:hover{
+    border:2px rgb(0, 0, 0) solid;
+     
+    cursor: pointer; */
+/* } */
+
+#HowTo h2{
+    position: absolute;
+    top: 30%;
+    width: 45%;   
+    display: block;
+    text-decoration: underline;
+}
+
+#HowTo p{
+    width: 45%;    
+    position: absolute;
+    top: 40%;
+    display: block;   
+}
+
+/* Contact Page */
+
+/* #Contact{  
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+} */
+.Popup_pg{  
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+}
+
+.Popup_pg1{  
+    color: white;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.55) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+}
+
+#Contactcrs{
+    position: absolute;
+    top: 21%;
+    right: 22.6%;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    /* cursor: pointer; */
+    transition: 0.1s;
+}
+
+#Contactcrs img{
+    border-radius: 20px;
+    height: 12px;
+    width: 12px;
+    padding: 3px;
+    /* cursor: pointer; */
+    filter: invert(.8);    
+}
+
+
+#Contact h2{
+    position: absolute;
+    top: 30%;
+    width: 45%;   
+    display: block;
+    text-decoration: underline;
+}
+
+#Contact div{
+    width: 45%;
+    height: 20vh;   
+    display: flex;   
+    position: absolute;
+    top: 40%;
+}
+
+#Contact div a{
+    margin: 4px 8%;
+    width: 12%;
+    height:66% ;
+}
+
+#Contact a:nth-child(1) {
+    margin-left: 0 ;
+    background-image: url(insta\ logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Contact a:nth-child(2) {
+    background-image: url(fb\ logo.png);
+    background-size: 86% 76%;
+    background-size: contain;
+    background-position: center center;   
+    background-repeat: no-repeat;    
+}
+
+#Contact a:nth-child(3) {
+    background-image: url(gmail\ logo.png);
+    background-size: contain; 
+    background-size: 100% 67%;
+    background-repeat: no-repeat;
+    background-position: center;        
+}
+
+.cntlink{
+    transition: 0.1s;
+}
+
+.cntlink:hover{
+    filter: brightness(80%);    
+}
+
+
+
+/* Theme Menu */
+
+#Theme{
+    color: rgb(255, 255, 255);
+    display: none;
+    position: fixed;
+    top: 35px;
+    background-color: rgb(20, 20, 20);  
+    border:2px rgb(36, 34, 34) solid;
+    border-left:none;
+    width:14%;
+    min-width: 109px;
+    height: 93.3075%;   
+}
+
+.titlename {
+    display: block;
+    width: 68%;
+    padding: 15px;
+    padding-bottom: 35px ;
+    padding-left: 12.5%;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.menucrs{
+    position: absolute;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    right: 4px;
+    top: 12.6px;
+    transition: 0.1s;
+}
+
+#Themecrs img{   
+    width: 12px;
+    cursor: pointer;
+    filter: invert(.8);
+}
+
+#Themecrs :hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#bg{
+   
+    height: 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;     
+}
+
+#noteimg{
+    display: flex;
+    flex-direction: column;
+    height: 198px;
+    justify-content: space-evenly;     
+}
+
+#noteimg li{
+    width:76%;
+    height: 40px;   
+}
+
+#noteimg img{
+    width:100%;
+    height: 100%;
+}
+
+#applybtn{
+    margin-top: 70px;
+    height: 11%;
+    width: 88%;       
+}
+
+#applybtn span{
+    float: right;
+    display: inline-block;
+    width: 35%;
+    height: 17px;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background-color: rgb(54, 125, 219);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+#applybtn span:hover{
+    background-color: rgb(60, 106, 167);
+}
+
+.item1{
+    display: inline-block;
+    font-size: 0.9rem;
+    width: 76%;
+    text-align: left;
+    padding: 10px 12.5%;   
+}
+.item1:hover{
+    background-color:rgb(39, 56, 77);
+}
+
+
+
+.item2{
+    display: inline-block;
+    font-size: 0.9rem;
+    width: 76%;
+    text-align: left;
+    padding: 10px 12.5%; 
+    background-color: rgb(36, 34, 34);
+     
+    
+}
+.item2:hover{
+    background-color:rgb(39, 56, 77);
+}
+
+
+
+.MenuHr{
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color:rgb(36, 34, 34);
+}
+
+
+/* Note Area */
+
+#notearea{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;  
+    justify-content: space-around;
+    margin:auto;
+    margin-top: 3%;
+    
+}
+
+.notepg{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px rgb(146, 146, 148) solid;
+    width: 178px;
+    height: auto;
+    min-height: 200px;
+    margin:18px 13px;    
+}
+
+.crscontainer{
+    width:100%;
+    height:24px;      
+}
+
+#notecrs{
+    float: right;    
+    width: 24px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;   
+    transition: 0.1s;
+}
+
+#notecrs img{    
+    width: 12px;
+    cursor: pointer;
+    /* filter: invert(.8); */
+}
+
+#notecrs:hover{   
+    cursor: pointer;
+}
+
+.notetxt{   
+    overflow-wrap: break-word;
+    width: 83%;
+    margin: 15px 0;
+    min-height: 124px;
+
+    
+}
+
+
+.checkcontainer{
+    width: 100%;
+    height:22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#check{
+    color: white;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px ;
+    background-color: rgb(54, 125, 219);
+    text-align: center;
+    font-size: 0.8rem;
+    width:35%;   
+    padding: 5px;
+    border: 2px solid rgb(146, 146, 148);
+    
+    
+}
+
+#check:hover{
+    background-color: rgb(60, 106, 167);
+    
+}
