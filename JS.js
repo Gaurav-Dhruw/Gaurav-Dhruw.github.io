@@ -4,16 +4,25 @@
 let menu = document.querySelector("#Menucontainer");
 let menubox = document.querySelector("#DropMenu");
 let crs = document.querySelector("#cross");
+menubox.style.transition = "0.5s";
 
 menu.addEventListener("click", function () {
     menu.style.display = "none";
-    menubox.style.transform = "translateX(0%)";
+    menubox.style.display = "block";
+
+    setTimeout(function () {
+        menubox.style.transform = "translateX(0%)";
+
+    }, 0);
+
+
 
 });
 
 crs.addEventListener("click", function () {
     menu.style.display = "block";
     menubox.style.transform = "translateX(-100%)";
+
 
 });
 
@@ -27,7 +36,7 @@ let thmbox = document.getElementById("Theme");
 
 let defaultbg = "light bg.jpg";
 let defaultnoteimg = "pexels-milo-textures-2768398.jpg";
-let tempnoteimg=defaultnoteimg;
+let tempnoteimg = defaultnoteimg;
 
 document.querySelector("body").style.backgroundImage = `url('${defaultbg}')`;
 
@@ -75,29 +84,29 @@ thm.addEventListener("click", function () {
         dumydiv.style.backgroundImage = `url('${defaultnoteimg}')`;
     }
 
-    
-    let thmdiv=document.querySelector("#notearea > div") ;
+
+    let thmdiv = document.querySelector("#notearea > div");
 
 
     if (thmdiv.style.backgroundImage.slice(4, -1).replace(/"/g, "") == 'pexels-fwstudio-129731.jpg') {
         childcnt[0].className = "item2";
         childcnt[1].className = "item1";
         childcnt[2].className = "item1";
-        
+
     }
     else if (thmdiv.style.backgroundImage.slice(4, -1).replace(/"/g, "") == "pexels-milo-textures-2768398.jpg") {
         childcnt[0].className = "item1";
         childcnt[1].className = "item2";
         childcnt[2].className = "item1";
-        
+
     }
     else {
         childcnt[0].className = "item1";
         childcnt[1].className = "item1";
         childcnt[2].className = "item2";
-        
+
     }
-    
+
 
 
 });
@@ -158,16 +167,16 @@ let contactpg = document.querySelector("#Contact");
 let abtpg = document.querySelector("#about");
 let htpg = document.querySelector("#HowTo");
 
-if(bg.style.backgroundImage.slice(4, -1).replace(/"/g, "")=='dark bg 1.jpg'){
-    contactpg.className="Popup_pg1";
-    htpg.className="Popup_pg1";
-    abtpg.className="Popup_pg1";
-        
+if (bg.style.backgroundImage.slice(4, -1).replace(/"/g, "") == 'dark bg 1.jpg') {
+    contactpg.className = "Popup_pg1";
+    htpg.className = "Popup_pg1";
+    abtpg.className = "Popup_pg1";
+
 }
-else{
-    contactpg.className="Popup_pg";
-    htpg.className="Popup_pg";
-    abtpg.className="Popup_pg";
+else {
+    contactpg.className = "Popup_pg";
+    htpg.className = "Popup_pg";
+    abtpg.className = "Popup_pg";
 
 }
 
@@ -177,12 +186,12 @@ drk.addEventListener("click", function () {
     bg.style.backgroundImage = "url('dark bg 1.jpg')";
     lgt.className = "item1";
     drk.className = "item2";
-    
-        contactpg.className="Popup_pg1";
-        htpg.className="Popup_pg1";
-        abtpg.className="Popup_pg1";
-            
-   
+
+    contactpg.className = "Popup_pg1";
+    htpg.className = "Popup_pg1";
+    abtpg.className = "Popup_pg1";
+
+
 
 });
 
@@ -192,25 +201,25 @@ lgt.addEventListener("click", function () {
 
     lgt.className = "item2";
     drk.className = "item1";
-    
-    
-        contactpg.className="Popup_pg";
-        htpg.className="Popup_pg";
-        abtpg.className="Popup_pg";
-    
-   
+
+
+    contactpg.className = "Popup_pg";
+    htpg.className = "Popup_pg";
+    abtpg.className = "Popup_pg";
+
+
 
 });
 
 if (bg.style.backgroundImage.slice(4, -1).replace(/"/g, "") == 'light bg.jpg') {
     lgt.className = "item2";
     drk.className = "item1";
-    
+
 }
 else {
     lgt.className = "item1";
     drk.className = "item2";
-    
+
 }
 
 
@@ -232,7 +241,7 @@ childcnt[0].addEventListener("click", function () {
     childcnt[0].className = "item2";
     childcnt[1].className = "item1";
     childcnt[2].className = "item1";
-    
+
 
 
 });
@@ -247,21 +256,21 @@ childcnt[1].addEventListener("click", function () {
     childcnt[0].className = "item1";
     childcnt[1].className = "item2";
     childcnt[2].className = "item1";
-    
-    
+
+
 
 });
 
 childcnt[2].addEventListener("click", function () {
     let allnotesprnt = document.querySelectorAll("#notearea > div");
     allnotesprnt.forEach(element => {
-        element.style.backgroundImage = "url('pexels-scott-webb-3255761.jpg')" ;
+        element.style.backgroundImage = "url('pexels-scott-webb-3255761.jpg')";
 
     });
     childcnt[0].className = "item1";
     childcnt[1].className = "item1";
     childcnt[2].className = "item2";
-    
+
 
 });
 
@@ -289,7 +298,7 @@ abt_crs.addEventListener("click", function () {
     abtpg.style.display = "none";
     document.querySelector("#navbar").style.display = "flex";
     document.querySelector("#DropMenu").style.display = "block";
-    document.querySelector("#TextArea").style.display = "block";
+    document.querySelector("#TextArea").style.display = "flex";
     document.querySelector("#notearea").style.display = "block";
 
 });
@@ -314,7 +323,7 @@ htcrs.addEventListener("click", function () {
     htpg.style.display = "none";
     document.querySelector("#navbar").style.display = "flex";
     document.querySelector("#DropMenu").style.display = "block";
-    document.querySelector("#TextArea").style.display = "block";
+    document.querySelector("#TextArea").style.display = "flex";
     document.querySelector("#notearea").style.display = "block";
 });
 
@@ -386,7 +395,7 @@ contactcrs.addEventListener("click", function () {
     contactpg.style.display = "none";
     document.querySelector("#navbar").style.display = "flex";
     document.querySelector("#DropMenu").style.display = "block";
-    document.querySelector("#TextArea").style.display = "block";
+    document.querySelector("#TextArea").style.display = "flex";
     document.querySelector("#notearea").style.display = "block";
 });
 
@@ -452,13 +461,13 @@ txtarea.addEventListener("blur", function () {
     let val = txtarea.value;
     let notebox = document.createElement("div");
 
-    
 
-    if(thmbox.style.display == "block"){
-        tempnoteimg= document.querySelector("#notearea > div").style.backgroundImage.slice(4, -1).replace(/"/g, "");      
+
+    if (thmbox.style.display == "block") {
+        tempnoteimg = document.querySelector("#notearea > div").style.backgroundImage.slice(4, -1).replace(/"/g, "");
     }
-    else{
-        tempnoteimg=defaultnoteimg;
+    else {
+        tempnoteimg = defaultnoteimg;
     }
 
     notebox.className = "notepg";
@@ -492,7 +501,7 @@ txtarea.addEventListener("blur", function () {
         document.querySelector("#dumy").remove();
     }
 
-   
+
     if (JSON.parse(localStorage.getItem("NOTE1")) == null) {
         notedata[`${randIdstr}`] = [`${val}`];
         localStorage.setItem("NOTE1", JSON.stringify(notedata));
@@ -549,8 +558,8 @@ function diventer(ee) {
             dumydiv.appendChild(dumyp);
             dumydiv.style.backgroundImage = tempnoteimg;
             document.querySelector("#notearea").appendChild(dumydiv);
-    
-            
+
+
         }
 
         delete notedata[`${ee}`];
@@ -596,38 +605,38 @@ function divout(ee) {
 // Filter Notes
 
 let search = document.querySelector("#Search");
-let searchbtn=document.querySelector("#SearchIcon");
+let searchbtn = document.querySelector("#SearchIcon");
 let searchval;
 
 searchbtn.addEventListener("click", function (e) {
 
-    
-        searchval = document.querySelector("#Search").value;
-        let filter = document.querySelectorAll("#notearea > div");
 
-        if (searchval != "" ) {
+    searchval = document.querySelector("#Search").value;
+    let filter = document.querySelectorAll("#notearea > div");
 
-            filter.forEach(element => {
-                searchval = searchval.toLowerCase();
-                let elmntid = element.getAttribute("id");
-                if (element.querySelector("p").innerText.toLowerCase().split(" ").includes(searchval)) {
-                    element.style.display = "flex";
-                }
-                else {
-                    element.style.display = "none";
+    if (searchval != "") {
 
-                }
-            });
-        }
-        else {
-
-            filter.forEach(element => {
-
+        filter.forEach(element => {
+            searchval = searchval.toLowerCase();
+            let elmntid = element.getAttribute("id");
+            if (element.querySelector("p").innerText.toLowerCase().split(" ").includes(searchval)) {
                 element.style.display = "flex";
+            }
+            else {
+                element.style.display = "none";
 
-            });
-        }
-    
+            }
+        });
+    }
+    else {
+
+        filter.forEach(element => {
+
+            element.style.display = "flex";
+
+        });
+    }
+
 });
 
 search.addEventListener("keyup", function (e) {

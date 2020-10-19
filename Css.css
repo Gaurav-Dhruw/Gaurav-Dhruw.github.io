@@ -66,14 +66,15 @@
     align-items: center;
     right: 13%;
     width: 19%;
+    min-width: 125px;
     
 }
 
 #Search{ 
     width: 100%;
     padding-left: 32px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 3px;
+    padding-bottom: 1px;
     cursor: text;
     background-color: rgb(223 218 218);
     text-align: left;
@@ -121,10 +122,13 @@ Body{
 
 
 /* Text Area */
+
 #TextArea{
-    width: 45%;
+   
     height: 20%;
-    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 75px;
     margin-bottom: 45px;
 }
@@ -135,10 +139,11 @@ textarea{
     border: rgb(167 164 164) solid 4px;
     border-radius: 7px;
     padding: 7px 10px;
-    width: 95%;
+    width: 45%;
     height: 81%;
     cursor: text;
     background-color: rgb(255, 255, 255);
+    
 }
 
 textarea:focus::-webkit-input-placeholder{
@@ -206,21 +211,22 @@ hr{
 
 #DropMenu{
     color: white;
-    display: block;
+    /* display: none; */
     position: fixed;
+    /* left: -22%; */
     top: 35px;
     background-color: rgb(20, 20, 20);  
     border:2px rgb(36, 34, 34) solid;
     border-left:none;
     width:14%;
     min-width: 109px;
-    height: 93.3075%;
-    transition: 0.5s;
+    height: 100%;
+    transition: 0.1s;
     transform: translateX(-100%);
 }
 
 #LiContainer{
-    height: 93%;   
+    height: 100%;   
 }
 
 .item{
@@ -498,7 +504,7 @@ hr{
     border-left:none;
     width:14%;
     min-width: 109px;
-    height: 93.3075%;   
+    height: 100%;   
 }
 
 .titlename {
