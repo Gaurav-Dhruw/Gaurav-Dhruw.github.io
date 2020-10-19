@@ -628,7 +628,7 @@ hr{
 
 #notearea{
     display: flex;
-    width: 50%;
+    width: 51%;
     flex-wrap: wrap;  
     justify-content: space-around;
     margin:auto;
